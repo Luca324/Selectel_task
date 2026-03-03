@@ -1,0 +1,8 @@
+<input type="checkbox" 
+    [value]="value" 
+    [id]="name" 
+    name="checkbox-group"
+    (change)="onCheck($event)">
+    <label for="name">{{name}}</label>
+    <p>Value: {{value}}</p>
+    <p>Checked: {{selected}}</p>

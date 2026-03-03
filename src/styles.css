@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+menu {
+    display: inline-block;
+    width: 200px;
+    height: 100%;
+    border-right: 2px #f4f4f4 solid;
+    margin: 10px;
+    padding: 10px;
+}
+main {
+    display: inline-block;
+}
