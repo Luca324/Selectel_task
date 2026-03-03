@@ -1,4 +1,7 @@
 <div *ngFor="let item of data">
     <app-checkbox-item
-    [item]="item"></app-checkbox-item>
+    [item]="item" 
+    [increaseValue]="increaseValue.bind(this)"
+    [decreaseValue]="decreaseValue.bind(this)"
+    ></app-checkbox-item>
 </div>

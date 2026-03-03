@@ -12,6 +12,7 @@ import { Data } from '../interfaces/Data';
 })
 export class SecondPageComponent {
   data: Data[] = []
+  sum : number = 0
   
   constructor(private dataService: DataService) {
     this.data = this.dataService.getData().reduce((acc: Data[], item: Data) => {
@@ -19,5 +20,12 @@ export class SecondPageComponent {
       acc.push(item)
       return acc
     }, [])
+  }
+increaseValue(val: number) {
+  this.sum += val
+}
+  decreaseValue(val: number) {
+  this.sum -= val
+    
   }
 }

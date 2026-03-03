@@ -8,12 +8,19 @@ import { Data } from '../interfaces/Data';
   styleUrl: './checkbox-item.component.css'
 })
 export class CheckboxItemComponent {
-  @Input() onSelect!: (a: number) => void
+  @Input() item!: Data
+  @Input() increaseValue!: (a: number) => void
+  @Input() decreaseValue!: (a: number) => void
+
   data: Data[] = []
-  onCheck(event: Event): void {
-    const value = +(event.target as HTMLInputElement).value
-    console.log(value)
-    this.onSelect(value)
+  onCheckboxChange(event: Event): void {
+    const checkbox = event.target as HTMLInputElement;
+    const value = +checkbox.value
+
+    if (checkbox.checked) {
+      this.increaseValue(value)
+    } else {
+      this.decreaseValue(value)
+    }
   }
-  
 }
