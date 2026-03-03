@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { NavigationEnd, Router, RouterLink } from '@angular/router';
+import { NgClass } from '@angular/common';
 import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-menu-item',
-  imports: [RouterLink],
+  imports: [RouterLink, NgClass],
   templateUrl: './menu-item.component.html',
   styleUrl: './menu-item.component.css'
 })
