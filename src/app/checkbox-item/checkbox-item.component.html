@@ -1,8 +1,13 @@
-<input type="checkbox" 
-    [value]="item.value" 
-    [id]="item.name" 
-    name="checkbox-group"
-    (change)="onCheckboxChange($event)">
-    <label for="item.name">{{item.name}}</label>
-    <p>Value: {{item.value}}</p>
-    <p>Checked: {{item.selected}}</p>
+<div class="checkbox-wrapper">
+    <input type="checkbox" 
+        [value]="item.value" 
+        [id]="item.name" 
+        name="checkbox-group"
+        [checked]="item.selected"
+        (change)="onCheckboxChange($event)">
+    <label [for]="item.name">{{item.name}}</label>
+</div>
+<div class="info-container">
+    <p><span class="info-label">Value:</span> <span class="value-display">{{item.value}}</span></p>
+    <p><span class="info-label">Status:</span> <span class="status-display" [ngClass]="{'status-checked': item.selected, 'status-unchecked': !item.selected}">{{item.selected ? 'Checked' : 'Unchecked'}}</span></p>
+</div>

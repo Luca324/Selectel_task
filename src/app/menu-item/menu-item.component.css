@@ -1,3 +1,29 @@
-.active {
-    color: green;
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  display: block;
+  padding: 12px 20px;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: var(--transition);
+  border-left: 3px solid transparent;
+  font-weight: 500;
+}
+
+a:hover {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  border-left-color: var(--primary-color);
+  text-decoration: none;
+}
+
+a.active {
+  background: linear-gradient(90deg, rgba(74, 144, 226, 0.1) 0%, rgba(74, 144, 226, 0.05) 100%);
+  color: var(--primary-color);
+  border-left-color: var(--primary-color);
+  font-weight: 600;
 }

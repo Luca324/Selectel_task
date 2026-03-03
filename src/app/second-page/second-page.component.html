@@ -1,8 +1,12 @@
-<p>sum: {{sum}}</p>
-<div *ngFor="let item of data">
+<div class="sum-container">
+    <p>Сумма выбранных элементов:</p>
+    <span class="sum-value">{{sum}}</span>
+</div>
+<div class="checkbox-list">
     <app-checkbox-item
-    [item]="item" 
-    [increaseValue]="increaseValue.bind(this)"
-    [decreaseValue]="decreaseValue.bind(this)"
-    ></app-checkbox-item>
+        *ngFor="let item of data"
+        [item]="item" 
+        [increaseValue]="increaseValue.bind(this)"
+        [decreaseValue]="decreaseValue.bind(this)">
+    </app-checkbox-item>
 </div>
